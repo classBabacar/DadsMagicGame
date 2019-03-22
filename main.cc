@@ -6,9 +6,6 @@ using namespace std;
 
 int main()
 {
-    int i=1;
-
-
     char ans;
     srand (time(NULL));
     double div = 1;
@@ -17,7 +14,6 @@ int main()
         cout << "hi" << endl;
         div = rand() %2+1;
     }
-    
     double num = rand() % 20+4;
     
     cout<<setw(5)<<"****YOU HAVE TO USE A PENCIL AND PAPER FOR THIS EXERCISE OR YOUR MIND****"<<endl;
@@ -30,18 +26,19 @@ int main()
     cout<<"when you are ready for me to tell you my number: press(Y)"<<endl;
     cin>>ans;
 
-    while(i)
+    bool tracker = true;
+    while(tracker)
     {
         if(ans == 'Y' || ans == 'y')
         {
             cout << "The secret number is: " << num/2 <<endl;
             cout << "Thank you for playing." << endl;
-            i = 0;
+            tracker = false;
         }  
         else
         {
             cout << "Thank you for playing." <<endl;
-            i = 0;
+            tracker = false;
         }
     }
 
